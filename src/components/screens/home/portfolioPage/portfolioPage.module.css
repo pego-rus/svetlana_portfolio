@@ -1,0 +1,55 @@
+.photographer {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.photographerName {
+    word-spacing: 100vw;
+    width: 400px;
+    text-wrap: wrap;
+    text-align: left;
+    margin-right: 50px;
+    font-family: 'Gabriela', serif;
+    font-size: 20pt;
+}
+.photographerPhoto {
+    width: clamp(100px, 250px,450px); height: auto;
+}
+@media screen and (max-width: 500px) {
+    .photographer {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .photographerName {
+        word-spacing: 100vw;
+        width: 150px;
+        margin-right: 0;
+        font-size:10pt
+    }    
+}
+.gridContainer {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 2fr);
+    gap: clamp(10px, 20px, 50px);
+}
+.gridContainer img {
+    width: 400px; height: auto;
+}
+@media screen and (max-width: 800px) {
+    .gridContainer {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        gap: clamp(10px, 20px, 50px)
+    }
+    .gridContainer img {
+        width: auto; height: auto;
+    }
+}
