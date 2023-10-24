@@ -1,5 +1,6 @@
-import PhotographerPhoto from "./photographerPhoto"
+import PhotographerPhoto from "./PhotographerPhoto"
 import PhotoSet from "./PhotoSet"
+import { forwardRef } from "react"
 
 const PortfolioPage = () => {
     return (
@@ -10,4 +11,4 @@ const PortfolioPage = () => {
     )
 }
 
-export default PortfolioPage
+export default forwardRef(PortfolioPage)
