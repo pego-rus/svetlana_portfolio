@@ -2,17 +2,14 @@ import styles from './mainScreen.module.css'
 import { useRef } from 'react';
 
 const Header = () => {
-    const ref1 = useRef('')
-    const ref2 = useRef(null)
-    const ref3 = useRef(null)
     const handleClick1 = () => {
-        ref1.current.scrollIntoView();
+        document.getElementById('photographer').scrollIntoView({behavior: 'smooth'})
     }
     const handleClick2 = () => {
-        ref2.current.scrollIntoView();
+        document.getElementById('photographer').scrollIntoView({behavior: 'smooth'})
     }
     const handleClick3 = () => {
-        ref3.current.scrollIntoView();
+        document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})
     }
     return (
     <>

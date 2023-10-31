@@ -4,15 +4,13 @@ import MainScreen from './components/screens/home/mainScreen/MainScreen'
 import PortfolioPage from './components/screens/home/portfolioPage/PortfolioPage'
 import Footer from './components/screens/home/footer/Footer'
 import './assets/styles/global.css'
-import { useRef } from 'react';
+import ContactMe from './components/screens/home/contactForm/ContactMe'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      const ref = useRef(null)
-      const ref2 = useRef(null)
-      const ref3 = useRef(null)
-    <MainScreen ref ={ ref }/>
-    <PortfolioPage ref ={ ref }/>
+    <MainScreen />
+    <PortfolioPage />
+    <ContactMe />
     <Footer />
   </React.StrictMode>,
 )

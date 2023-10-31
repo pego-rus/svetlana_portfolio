@@ -15,9 +15,9 @@
     font-size: 20pt;
 }
 .photographerPhoto {
-    width: clamp(100px, 250px,450px); height: auto;
+    width: clamp(50px, 250px,450px); height: auto;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
     .photographer {
         padding-top: 30px;
         display: flex;
@@ -31,18 +31,26 @@
         width: 150px;
         margin-right: 0;
         font-size:10pt
-    }    
+    }   
 }
 .gridContainer {
+    padding-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(2, 2fr);
-    gap: clamp(10px, 20px, 50px);
+    gap: 40px;
 }
 .gridContainer img {
-    width: 400px; height: auto;
+    width: 620px; height: auto;
+    transition: 0.4s ease-in-out;
 }
-@media screen and (max-width: 800px) {
+.gridContainer img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+@media screen and (max-width: 1320px) {
     .gridContainer {
         display: flex;
         flex-direction: column;
