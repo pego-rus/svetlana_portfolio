@@ -1,18 +1,22 @@
 .formDiv {
     background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
 }
 .getRequest {
+    padding-top: 7px;
     padding-left: 20px;
     letter-spacing: 1.5px;
+}
+@media screen and (max-width: 600px) {
+    .getRequest {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .getRequest input{
     padding-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
     outline: none;
-    
     width: clamp(150px, 250px, 400px); height: 30px;
     border-radius: 8px;
     border: 2px solid transparent;
