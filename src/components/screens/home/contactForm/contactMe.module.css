@@ -38,7 +38,7 @@
     width: clamp(150px, 250px, 400px); height: 34px;
     font-size: clamp(6pt, 8pt, 12pt);
     color: white;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .getRequest button:hover {
     cursor: pointer;
