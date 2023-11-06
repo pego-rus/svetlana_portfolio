@@ -1,5 +1,7 @@
 .formDiv {
-    background-color: aquamarine;
+    background: rgb(0,79,116);
+    background: linear-gradient(94deg, rgba(0,79,116,1) 0%, rgba(0,98,76,1) 50%, rgba(0,124,95,1) 100%);
+    color: white;
 }
 .getRequest {
     padding-top: 7px;
@@ -23,10 +25,10 @@
     transition: 0.3s ease-in-out;
 }
 .getRequest input:focus{
-    border: 2px solid #6FA8DC;
-    -webkit-box-shadow: 0px 10px 27px 0px #6FA8DC;
-    -moz-box-shadow: 0px 10px 27px 0px #6FA8DC;
-    box-shadow: 0px 10px 27px 0px #6FA8DC;
+    border: 2px solid  #287233;
+    -webkit-box-shadow: 0px 10px 27px 0px #009B77;
+    -moz-box-shadow: 0px 10px 27px 0px #009B77;
+    box-shadow: 0px 10px 27px 0px #009B77;
 }
 .getRequest button {
     margin-right: 25px;
@@ -34,7 +36,7 @@
     font-family: 'Gabriela', serif;
     border-radius: 5px;
     border: none;
-    background-color: #6FA8DC;
+    background-color:  #6B8E23;
     width: clamp(150px, 250px, 400px); height: 34px;
     font-size: clamp(6pt, 8pt, 12pt);
     color: white;
@@ -42,5 +44,5 @@
 }
 .getRequest button:hover {
     cursor: pointer;
-    background-color: #3D85C6;
+    background-color: #0A4500;
 }

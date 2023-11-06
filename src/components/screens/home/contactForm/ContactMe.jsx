@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import styles from './contactMe.module.css'
+import ModalWindow from '../../ui/modalWindow/ModalWindow';
+import { useEffect, useState } from 'react';
+import styles from './contactMe.module.css';
 
 const clearData = {
     name: '',
@@ -10,17 +11,17 @@ const clearData = {
 const ContactMe = () => {
 
     const [input, setInput] = useState(clearData);
+    const [requestState, setRequestState] = useState(false)
 
     const handleChange = (event) => {
-        let name = event.target.dataset.text;
-        setInput({...input, [name] : event.target.value});
+        setInput({...input, [event.target.dataset.text] : event.target.value});
     }
 
     const clickHandler = (el) => {
         const newRequest = JSON.stringify(input);
         console.log(newRequest);
+        (input.name && input.email && input.phone) ? setRequestState(true) : (setRequestState(false), alert('Заполните все поля!'));
         el.preventDefault();
-        setInput(clearData)
     };
 
     return (
@@ -32,6 +33,13 @@ const ContactMe = () => {
                 <input type="text" data-text='phone' value={input.phone} placeholder='Номер телефона' onChange={handleChange} />
                 <button onClick = {clickHandler}>Отправить запрос на сотрудничество</button>
             </form>
+            <ModalWindow 
+            requestName = {input.name} 
+            requestState = {requestState} 
+            setRequestState = {setRequestState} 
+            setInput = {setInput}
+            clearData = {clearData}
+             />
         </div>
     )
 }

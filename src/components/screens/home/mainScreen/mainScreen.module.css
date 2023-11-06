@@ -1,6 +1,6 @@
 .mainscreenContainer {
     margin: 0;
-    height: 1080px;
+    height: 900px;
     background-image: url(https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_6533a7aa63f5095f27e7cd39_6533a8474098ea1f277ea667/scale_2400);
     background-size: cover;
     background-position: center;
@@ -38,7 +38,7 @@ ul {
 }
 li {
     font-family: 'Gabriela', serif;
-    font-size: 20pt;
+    font-size: 15pt;
     font-weight: bold;
     height: 35px;
     line-height: 35px;
