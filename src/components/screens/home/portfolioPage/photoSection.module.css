@@ -1,0 +1,31 @@
+.gridInner {
+    width: 500px;
+    height: fit-content;
+    overflow: hidden;
+    text-align: center;
+}
+.gridInner h2 {
+    text-transform: uppercase;
+}
+.gridInner h3 {
+}
+.slider {
+    overflow-y: hidden;
+    overflow-X: hidden;
+    display: flex;
+}
+.slider img {
+    width: 500px;
+    height: auto;
+    transition: 0.5s ease-in-out;
+}
+
+.slider img:hover {
+    transform: scale(1.3);
+    cursor: pointer
+}
+@media screen and (max-width: 600px) {
+    .gridInner {
+        transform: scale(0.7);
+    }
+}
