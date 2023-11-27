@@ -1,15 +1,9 @@
 import styles from './portfolioPage.module.css'
 
-const PhotoSet = () => {
+const PhotoSet = ({ links }) => {
     return (
         <div className={styles.gridContainer}>
-            <img src="https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_6533a7aa63f5095f27e7cd39_6533a847b2518f48862d9bc0/scale_2400" alt="" />
-            <img src="https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_6533a7aa63f5095f27e7cd39_6533a847b2518f48862d9bc0/scale_2400" alt="" />
-            <img src="https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_6533a7aa63f5095f27e7cd39_6533a847b2518f48862d9bc0/scale_2400" alt="" />
-            <img src="https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_6533a7aa63f5095f27e7cd39_6533a847b2518f48862d9bc0/scale_2400" alt="" />
-            <img src="https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_6533a7aa63f5095f27e7cd39_6533a847b2518f48862d9bc0/scale_2400" alt="" />
-            <img src="https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_6533a7aa63f5095f27e7cd39_6533a847b2518f48862d9bc0/scale_2400" alt="" />
-            <img src="https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_6533a7aa63f5095f27e7cd39_6533a847b2518f48862d9bc0/scale_2400" alt="" />
+            {links && links.length != 0 ? links.map((el, index)=> <img key={index} src={el} alt="" />) : <p style={{fontSize: '15pt', letterSpacing: '3px'}}>Photos not uploaded!</p>}
         </div>
     )
 }

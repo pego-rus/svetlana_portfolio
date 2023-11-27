@@ -1,6 +1,6 @@
 .mainscreenContainer {
     margin: 0;
-    height: 1080px;
+    height: 900px;
     background-image: url(https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_6533a7aa63f5095f27e7cd39_6533a8474098ea1f277ea667/scale_2400);
     background-size: cover;
     background-position: center;
@@ -13,19 +13,21 @@
 ul {
     padding-top: 20px;
     padding-left: 0;
-    min-width: 170px;
     height: 25px;
-    width: 450px;
+    width: 800px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
     text-transform: uppercase;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 700px) {
+    .mainscreenContainer {
+        height: 300px;
+    }
     ul {
         margin: 0 auto;
-        height: fit-content;
+        height: 200px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -36,7 +38,7 @@ ul {
 }
 li {
     font-family: 'Gabriela', serif;
-    font-size: clamp(11pt, 14pt, 20pt);
+    font-size: 15pt;
     font-weight: bold;
     height: 35px;
     line-height: 35px;
@@ -52,11 +54,14 @@ li:hover {
 li::before {
     position: absolute;
     content: '';
-    width: 132px;
-    top: 3px;
-    border-bottom: solid 2px white;
+    width: 164px;
+    top: 0px;
+    border-bottom: solid 3px white;
     transform: translate(-100%);
-    transition: 0.4s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+li:nth-child(2)::before {
+    width: 230px;
 }
 li:hover::before {
     transform: translate(0%);
