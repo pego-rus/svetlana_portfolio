@@ -1,15 +1,16 @@
 import styles from './photoSection.module.css'
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 
 const PhotoSection = ({ fields }) => {
     const imgRef = useRef(null);
-    let timer = setInterval(function () {
-            console.log(imgRef.current)
+    useEffect(() => {
+            let timer = setInterval(function () {
             imgRef.current.scrollBy({
                 left: 500,
                 behavior: 'smooth'
             })
-        },2000)
+            },3000)
+        }, [])
     return (
     <div className={styles.gridInner}>
         <h2>{fields.name}</h2>
