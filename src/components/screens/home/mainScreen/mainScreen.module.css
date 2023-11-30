@@ -1,6 +1,6 @@
 .mainscreenContainer {
     margin: 0;
-    height: 900px;
+    height: 100vh;
     background-image: url(https://avatars.dzeninfra.ru/get-zen_brief/271828/pub_6533a7aa63f5095f27e7cd39_6533a8474098ea1f277ea667/scale_2400);
     background-size: cover;
     background-position: center;
@@ -21,27 +21,13 @@ ul {
     list-style: none;
     text-transform: uppercase;
 }
-@media screen and (max-width: 700px) {
-    .mainscreenContainer {
-        height: 300px;
-    }
-    ul {
-        margin: 0 auto;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        list-style: none;
-        text-transform: uppercase;
-    }
-}
 li {
     font-family: 'Gabriela', serif;
     font-size: 15pt;
     font-weight: bold;
     height: 35px;
     line-height: 35px;
+    letter-spacing: 3px;
     color: white;
     position: relative;
     overflow: hidden;
@@ -65,4 +51,23 @@ li:nth-child(2)::before {
 }
 li:hover::before {
     transform: translate(0%);
+}
+@media screen and (max-width: 700px) {
+    ul {
+        margin: 0 auto;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        text-transform: uppercase;
+    }
+    li {
+        font-size: 22pt;
+        letter-spacing: 3px;
+    }
+    li::before {
+        content: none;
+    }
 }

@@ -1,0 +1,50 @@
+.link {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 40px;
+    background-color: darkgreen;
+    text-decoration: none;
+    font-size: 15pt;
+    color: white;
+    transition: 0.5s;
+}
+.link:hover {
+    background-color: green;
+}
+.h4 {
+    font-size: 25pt;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.carousell {
+    display:grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 40px;
+    row-gap: 60px;
+    justify-items: center;
+    margin-bottom: 60px;
+}
+.carousellItem {
+    width: 80vh;
+}
+.scrollTop{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    font-size: 30pt;
+    font-weight: bold;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 100%;
+    width: 80px; height: 80px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.scrollTop:hover {
+    background: yellowgreen;
+}

@@ -1,6 +1,7 @@
 import ModalWindow from '../../ui/modalWindow/ModalWindow';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styles from './contactMe.module.css';
+import { ViewPositionContext } from '../../../../providers/ViewPositionProvider';
 
 const clearData = {
     name: '',
@@ -10,8 +11,11 @@ const clearData = {
 
 const ContactMe = () => {
 
+    const {viewPosition, setViewPosition} = useContext(ViewPositionContext);
+
+
     const [input, setInput] = useState(clearData);
-    const [requestState, setRequestState] = useState(false)
+    const [requestState, setRequestState] = useState(false);
 
     const handleChange = (event) => {
         setInput({...input, [event.target.dataset.text] : event.target.value});

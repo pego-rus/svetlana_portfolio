@@ -1,15 +1,17 @@
 import styles from './mainScreen.module.css'
-import { useRef } from 'react';
 
 const Header = () => {
     const handleClick1 = () => {
         document.getElementById('photographer').scrollIntoView({behavior: 'smooth'})
     }
     const handleClick2 = () => {
-        document.getElementById('photographer').scrollIntoView({behavior: 'smooth'})
+        document.getElementById('grid').scrollIntoView({behavior: 'smooth', block: 'end'})
     }
     const handleClick3 = () => {
-        document.getElementById('contacts').scrollIntoView({behavior: 'smooth'})
+        document.getElementById('contacts').scrollIntoView({behavior: 'smooth', block: 'end'}),
+        setTimeout(()=> {
+            document.getElementById('contacts').scrollIntoView({behavior: 'smooth', block: 'end'})
+        },900)
     }
     return (
     <>

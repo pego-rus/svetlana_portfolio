@@ -2,6 +2,15 @@
     background: rgb(0,79,116);
     background: linear-gradient(94deg, rgba(0,79,116,1) 0%, rgba(0,98,76,1) 50%, rgba(0,124,95,1) 100%);
     color: white;
+    animation: 1s popUp ease-in-out;
+}
+@keyframes popUp {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
 .getRequest {
     padding-top: 7px;
