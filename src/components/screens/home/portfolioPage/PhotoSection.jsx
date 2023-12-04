@@ -4,7 +4,12 @@ import { useRef, useEffect, useState } from 'react'
 
 const PhotoSection = ({ fields }) => {
     const [scrollLeft, setScrollLeft] = useState(true);
+    const [pictureLoaded, setPictureLoaded] = useState(false);
     const imgRef = useRef(null);
+
+
+    const handleOnload = () => setPictureLoaded(true);
+
     useEffect(() => {
         let photoNum = 1;
         function scrollFunc () {
@@ -32,8 +37,9 @@ const PhotoSection = ({ fields }) => {
                     };
                 }, 3000)
             };
-        scrollFunc()
-        }, [scrollLeft]);
+        pictureLoaded && scrollFunc()
+        }, [pictureLoaded, scrollLeft]);
+
     return (
     <div className={styles.gridInner}>
         <Link className={styles.link} to={`/section/${fields.id}`}>
@@ -41,7 +47,10 @@ const PhotoSection = ({ fields }) => {
             <h3>{fields.description}</h3>
             <div ref={imgRef} id={fields.id} className={styles.slider}>
                     {fields.slideshow.map((link, index) =>
-                        <img key={index} src={link} alt="" />
+                        <div className={ pictureLoaded ? 
+                            styles.imgLoaded : styles.imgLoading} key={index}>
+                            <img src={link} alt="" onLoad={handleOnload} />
+                        </div>
                     )}        
             </div>
         </Link>
